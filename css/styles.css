@@ -1,0 +1,331 @@
+/* Mengatur ukuran dan jarak navbar */
+.navbar {
+    background-color: rgb(14, 14, 45);
+    padding: 15px 10px; /* Menambah padding untuk memperbesar navbar */
+    font-size: 1.2em; /* Mengatur ukuran font navbar */
+}
+
+.navbar-brand {
+    padding-left: 20px; /* Menambahkan jarak kiri pada brand */
+}
+
+.navbar-brand img {
+    max-height: 40px; /* Sesuaikan tinggi maksimum logo */
+    height: auto;
+    width: auto;
+    margin-left: 30px;
+    margin-right: 10px; /* Jarak antara logo dan teks */
+}
+
+#navbarNav {
+    margin-right: 40px; /* Sesuaikan nilai margin sesuai kebutuhan Anda */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 10px; /* Mengatur jarak antar item */
+    padding-right: 20px; /* Mengatur padding kanan pada item */
+}
+
+.navbar-nav .nav-link {
+    border: 1px solid #f6f6f6; /* Menambahkan border putih pada link */
+    border-radius: 5px; /* Membuat border melengkung */
+    padding: 5px 10px; /* Menambah padding dalam pada link */
+    transition: transform 0.3s, box-shadow 0.3s; /* Menambahkan efek transisi saat hover */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #090223; /* Mengubah warna latar belakang saat hover */
+    transform: scale(1.05); /* Membesarkan link saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow saat hover */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #000000;
+    border: 2px solid #0056b3;
+    background-color: #ffffff; /* Mengubah warna latar belakang untuk item aktif */
+    transform: scale(1.05); /* Membesarkan link untuk item aktif */
+    box-shadow: 0 2px 8px rgba(212, 211, 211, 0.3); /* Menambahkan shadow untuk item aktif */
+}
+
+/* Menggunakan grid style Bootstrap untuk layar yang lebih besar */
+@media (min-width: 768px) {
+    .navbar-nav {
+        display: flex; /* Mengatur navbar menjadi flexbox */
+        justify-content: flex-end; /* Menempatkan item navbar di kanan */
+    }
+}
+
+/* Navbar sticky agar tetap di atas saat di-scroll */
+.navbar.fixed-top {
+    position: sticky; /* Membuat navbar tetap di posisi atas */
+    top: 0; /* Menentukan posisi atas */
+    z-index: 1030; /* Mengatur z-index agar navbar tetap di atas elemen lain */
+}
+
+/*-------------------------------------------------------------------------*/
+
+/* Style umum footer */
+footer {
+    background-color: rgb(14, 14, 45); /* Background footer */
+    color: #fff; /* Warna teks footer */
+    padding: 40px 20px 10px 20px; /* Padding atas bawah footer */
+}
+
+/* Style untuk card media sosial */
+.card-deck {
+    display: flex; /* Mengatur card deck menjadi flexbox */
+    flex-wrap: wrap; /* Membuat card deck bisa wrap */
+    justify-content: space-around; /* Mengatur jarak antar card */
+}
+
+.footer-card {
+    background-color: rgb(24, 24, 72); /* Background card */
+    border: none; /* Menghilangkan border default card */
+    margin: 5px; /* Margin antar card */
+    padding: 10px; /* Padding dalam card */
+    border-radius: 8px; /* Membuat border melengkung */
+    text-align: center; /* Mengatur teks dan gambar di tengah */
+    transition: transform 0.3s, box-shadow 0.3s; /* Efek transisi pada transform dan shadow */
+}
+
+.footer-card:hover {
+    transform: scale(1.05); /* Membesarkan card saat hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Menambahkan shadow saat hover */
+}
+
+.footer-firstrow-fa {
+    width: 40px; /* Lebar icon */
+    height: auto; /* Tinggi otomatis sesuai aspek rasio */
+}
+
+.footer-firstrow-left,
+.footer-firstrow-right {
+    padding: 0px 0px 15px 0; /* Padding atas bawah untuk baris pertama */
+}
+
+.footer-firstrow-right {
+    text-align: right; /* Posisi icon media sosial di kanan */
+}
+
+.footer-firstrow-icon {
+    margin: 0 5px; /* Jarak antar icon media sosial */
+}
+
+.footer-secondrow-ul {
+    list-style-type: none; /* Menghilangkan bullet pada list */
+    padding-left: 0; /* Menghilangkan padding kiri pada list */
+}
+
+.footer-secondrow-link {
+    color: #fff; /* Warna link */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    display: block; /* Menjadikan link sebagai block element */
+    margin: 5px 0; /* Jarak antar link */
+}
+
+.footer-secondrow-link:hover {
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+.footer-finalrow {
+    margin-top: 20px; /* Jarak atas pada baris terakhir */
+}
+
+.footer-finalrow p {
+    margin: 0; /* Menghilangkan margin pada paragraf */
+    cursor: pointer; /* Mengubah cursor saat hover */
+}
+
+/* Style untuk layar kecil */
+@media (max-width: 767px) {
+    .navbar-nav .nav-item {
+        margin-left: 10px; /* Menghilangkan jarak antar item pada layar kecil */
+        padding-right: 0; /* Menghilangkan padding kanan pada item pada layar kecil */
+    }
+
+    .navbar-nav .nav-link {
+        border: 3px; /* Menghilangkan border pada link pada layar kecil */
+        padding: 10px 15px; /* Menambah padding dalam pada link */
+        margin-bottom: 5px;
+    }
+
+    .navbar-brand img {
+        max-height: 30px; /* Sesuaikan tinggi maksimum logo untuk layar kecil */
+        margin-left: 10px; /* Mengurangi margin kiri pada layar kecil */
+    }
+
+    footer {
+        padding: 20px 10px 5px 10px; /* Mengurangi padding atas bawah footer pada layar kecil */
+    }
+
+    .footer-card {
+        margin: 10px 0; /* Mengatur margin antar card pada layar kecil */
+        padding: 15px; /* Mengatur padding dalam card pada layar kecil */
+    }
+
+    .footer-firstrow-right {
+        text-align: center; /* Posisi icon media sosial di tengah pada layar kecil */
+    }
+}
+
+
+/* Basic Carousel Styling */
+.carousel {
+    margin-bottom: 30px;
+}
+
+.carousel-inner {
+    border-radius: 15px; /* Membuat sudut membulat untuk carousel */
+}
+
+.carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Mengatur transisi untuk animasi slide */
+}
+
+/* Gambar dalam carousel */
+.banner_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Membulatkan sudut gambar */
+}
+
+/* Basic Carousel Styling */
+.carousel {
+    margin-bottom: 30px;
+}
+
+.carousel-inner {
+    border-radius: 15px; /* Membuat sudut membulat untuk carousel */
+}
+
+.carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Mengatur transisi untuk animasi slide */
+}
+
+/* Gambar dalam carousel */
+.banner_img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Membulatkan sudut gambar */
+}
+
+/* Konten dalam carousel */
+.banner_taital_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+    background: rgb(24, 42, 100); /* Menambahkan latar belakang semi-transparan */
+    color: #fff; /* Warna teks putih */
+    border-radius: 15px; /* Membulatkan sudut konten */
+}
+
+.banner_taital {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.search_text {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search_bt a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.search_bt a:hover {
+    background: #0056b3;
+}
+
+/* Styling untuk tombol navigasi carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff; /* Warna latar belakang tombol navigasi */
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #0056b3;
+}
+
+/* Custom position for carousel indicators container */
+.carousel-indicators-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Memberikan jarak antara carousel dan indikator */
+    position: relative;
+    bottom: -30px; /* Menempatkan container indikator tepat di bawah carousel */
+}
+
+/* Custom styles for carousel indicators */
+.carousel-indicators {
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.carousel-indicators-container .carousel-indicators li {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 7px !important;
+    border-radius: 100% !important;
+    background-color: #000000 !important;
+    border: 3px solid #0056b3 !important;
+}
+
+.carousel-indicators-container .carousel-indicators li.active {
+    background-color: #ffffff !important; /* Warna indikator aktif (biru tua) */
+    transform: scale(1.5) !important;
+}
+
+/* Custom position for carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Atur lebar area klik untuk tombol */
+}
+
+.carousel-control-prev {
+    left: -5%; /* Atur jarak tombol dari tepi kiri */
+}
+
+.carousel-control-next {
+    right: -5%; /* Atur jarak tombol dari tepi kanan */
+}
+
+/* Media Query untuk tampilan responsif */
+@media (max-width: 768px) {
+    .banner_taital {
+        font-size: 1.5em;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+    }
+
+    .carousel-control-prev {
+        left: -5%;
+    }
+
+    .carousel-control-next {
+        right: -5%;
+    }
+}
+
